@@ -7,11 +7,11 @@ var Graphics = {
         this.scene = new THREE.Scene();
 
         // Lights
-        var ambientLight = new THREE.AmbientLight(0x666666);
+        var ambientLight = new THREE.AmbientLight(0x999999);
         this.scene.add(ambientLight);
 
-        var directionalLight = new THREE.DirectionalLight(0x887766);
-        directionalLight.position.set(-1, 1, 5).normalize();
+        var directionalLight = new THREE.DirectionalLight(0xffffff);
+        directionalLight.position.set(-1, 1, 1).normalize();
         this.scene.add(directionalLight);
 
         // Camera without AR
@@ -26,7 +26,7 @@ var Graphics = {
         // Render
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         this.renderer.setSize(App.settings.width, App.settings.height);
-        this.renderer.setClearColor(new THREE.Color('lightgrey'), 0);
+        this.renderer.setClearColor(new THREE.Color('white'), 0);
 
         document.body.appendChild(this.renderer.domElement);
 
@@ -39,7 +39,7 @@ var Graphics = {
         loader.load(params.path, (geometry) => {
             var mesh = new THREE.Mesh(geometry, params.material);
             mesh.position.set(0, 0, 0);
-            mesh.scale.set(40, 40, 40);
+            mesh.scale.set(30, 30, 30);
             mesh.castShadow = true;
             mesh.receiveShadow = true;
 
