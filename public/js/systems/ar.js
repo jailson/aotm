@@ -6,7 +6,7 @@ var AR = {
     markerIndex: 0,
 
     run: function () {
-        var cameraParameters = new ARCameraParam('data/camera_para.dat', () => {
+        var cameraParameters = new ARCameraParam('data/camera_para-iphone_5_rear-640x480_1.0m.dat', () => {
             var Graphics = App.systems.Graphics;
             this.controller = new ARController(App.settings.width, App.settings.height, cameraParameters);
             var projectionMatrix = this.controller.getCameraMatrix();
@@ -30,7 +30,8 @@ var AR = {
         Graphics.scene.add(this.markerRoot);
 
         var materialWhite = new THREE.MeshPhongMaterial({ color: 0xfdfdfd, specular: 0x111111, shininess: 200 });
-        Graphics.loadModel({ path: './models/ayogo_back.stl', materialWhite }, (model) => {
+        
+        Graphics.loadModel({ path: './models/ayogo_back.stl', material: materialWhite }, (model) => {
             this.markerRoot.add(model);
         }); 
 
