@@ -1,0 +1,22 @@
+{
+  "name": "aotm",
+  "version": "0.1.0",
+  "description": "AOTM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jailson/aotm.git"
+  },
+  "author": "Jailson Brito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jailson/aotm/issues"
+  },
+  "homepage": "https://github.com/jailson/aotm#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
